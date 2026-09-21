@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="icon" type="image/x-icon" href="/favicon.ico">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Download More Hats</title>
+		<link href="/src/style.css" rel="stylesheet">
+		<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+		<style>[x-cloak]{display: none;}</style>
+	</head>
+	<body class="bg-gray-300 flex flex-col w-full h-screen items-center justify-center gap-8" x-data="{clicked: false}">
+		<h1 class="text-4xl" x-text="clicked ? 'You Wouldn\'t' : 'Download More Hats'">Download More Hats</h1>
+		<img src="/src/assets/at.webp"
+		     :src="clicked ? '/src/assets/gasp.webp' : '/src/assets/hat.webp'"
+		     alt="HAT"
+		     class="cursor-pointer"
+		     title="Download"
+		     @click="clicked = true"
+		>
+		<a class="text-fg-brand hover:underline" href="https://twitch.tv/dyarikku" target="_blank" x-show="clicked" x-cloak>Beg for Forgiveness</a>
+	</body>
+</html>
