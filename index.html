@@ -9,11 +9,26 @@
 		<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 		<style>[x-cloak]{display: none;}</style>
 	</head>
-	<body class="bg-gray-300 flex flex-col w-full h-screen items-center justify-center gap-8" x-data="{clicked: false}">
-		<h1 class="text-4xl" x-text="clicked ? 'YOU WOULDN\'T' : 'CLICK TO DOWNLOAD MORE HATS'">CLICK TO DOWNLOAD MORE HATS</h1>
-		<img src="/src/assets/hat.webp" alt="HAT" class="cursor-pointer animate-[zoom_2s_ease-in-out_infinite]" title="Download" @click="clicked = true" x-show="!clicked">
-		<img src="/src/assets/gasp.webp" alt="YOU WOULDN'T" title="You Wouldn't?!" x-show="clicked" x-cloak>
-		<a class="hover:underline" href="https://twitch.tv/dyarikku" x-show="clicked" x-cloak>Beg the Fox for Forgiveness</a>
-		<a class="text-xs hover:underline absolute bottom-2" href="https://github.com/ikanexus/downloadmorehats.com">by @ika.dev</a>
+	<body class="bg-gray-300 flex flex-col w-full h-screen items-center justify-center" x-data="{clicked: false}">
+		<template x-if="!clicked">
+			<div class="flex flex-col items-center gap-8">
+				<h1 class="text-4xl">
+					<span class="icon-[heroicons--arrow-down-solid]"></span>
+					CLICK TO DOWNLOAD MORE HATS
+					<span class="icon-[heroicons--arrow-down-solid]"></span>
+				</h1>
+				<img src="/src/assets/hat.webp" alt="HAT" class="cursor-pointer animate-[zoom_2s_ease-in-out_infinite]" title="Download" @click="clicked = true">
+			</div>
+		</template>
+		<template x-if="clicked">
+			<div class="flex flex-col items-center gap-8">
+				<h1 class="text-4xl">
+					YOU WOULDN'T
+				</h1>
+				<img src="/src/assets/gasp.webp" alt="YOU WOULDN'T" title="You Wouldn't?!">
+				<a class="hover:underline" href="https://twitch.tv/dyarikku">Beg the Fox for Forgiveness</a>
+			</div>
+		</template>
+		<span class="text-xs absolute bottom-2">by @ika.dev</span>
 	</body>
 </html>
