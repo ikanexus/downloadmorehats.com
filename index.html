@@ -10,9 +10,10 @@
 		<style>[x-cloak]{display: none;}</style>
 	</head>
 	<body class="bg-gray-300 flex flex-col w-full h-screen items-center justify-center gap-8" x-data="{clicked: false}">
-		<h1 class="text-4xl" x-text="clicked ? 'You Wouldn\'t' : 'Download More Hats'">Download More Hats</h1>
+		<h1 class="text-4xl" x-text="clicked ? 'YOU WOULDN\'T' : 'DOWNLOAD MORE HATS'">DOWNLOAD MORE HATS</h1>
 		<img src="/src/assets/hat.webp" alt="HAT" class="cursor-pointer" title="Download" @click="clicked = true" x-show="!clicked">
 		<img src="/src/assets/gasp.webp" alt="YOU WOULDN'T" title="You Wouldn't?!" x-show="clicked" x-cloak>
-		<a class="text-fg-brand hover:underline" href="https://twitch.tv/dyarikku" x-show="clicked" x-cloak>Beg the Fox for Forgiveness</a>
+		<a class="hover:underline" href="https://twitch.tv/dyarikku" x-show="clicked" x-cloak>Beg the Fox for Forgiveness</a>
+		<a class="hover:underline absolute bottom-2" href="https://github.com/ikanexus/downloadmorehats.com">by @ika.dev</a>
 	</body>
 </html>
