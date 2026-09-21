@@ -11,13 +11,8 @@
 	</head>
 	<body class="bg-gray-300 flex flex-col w-full h-screen items-center justify-center gap-8" x-data="{clicked: false}">
 		<h1 class="text-4xl" x-text="clicked ? 'You Wouldn\'t' : 'Download More Hats'">Download More Hats</h1>
-		<img src="/src/assets/at.webp"
-		     :src="clicked ? '/src/assets/gasp.webp' : '/src/assets/hat.webp'"
-		     alt="HAT"
-		     class="cursor-pointer"
-		     title="Download"
-		     @click="clicked = true"
-		>
+		<img src="/src/assets/hat.webp" alt="HAT" class="cursor-pointer" title="Download" @click="clicked = true" x-show="!clicked">
+		<img src="/src/assets/gasp.webp" alt="YOU WOULDN'T" title="You Wouldn't?!" x-show="clicked">
 		<a class="text-fg-brand hover:underline" href="https://twitch.tv/dyarikku" target="_blank" x-show="clicked" x-cloak>Beg for Forgiveness</a>
 	</body>
 </html>
