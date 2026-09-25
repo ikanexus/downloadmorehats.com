@@ -5,7 +5,7 @@ export default defineConfig({
     presetWind4(),
     presetIcons(),
     presetWebFonts({
-      provider: 'google',
+      provider: 'bunny',
       fonts: {
         sans: 'Actor',
       },
