@@ -1,3 +1,4 @@
+import '@fontsource/actor'
 import 'virtual:uno.css'
 
 const view = document.getElementById('view')
