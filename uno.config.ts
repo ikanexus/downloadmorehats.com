@@ -1,9 +1,15 @@
-import { defineConfig, presetWind4, presetIcons, transformerCompileClass } from 'unocss'
+import { defineConfig, presetWind4, presetIcons, transformerCompileClass, presetWebFonts } from 'unocss'
 
 export default defineConfig({
   presets: [
     presetWind4(),
     presetIcons(),
+    presetWebFonts({
+      provider: 'google',
+      fonts: {
+        sans: 'Actor',
+      },
+    }),
   ],
   theme: {
     animation: {
