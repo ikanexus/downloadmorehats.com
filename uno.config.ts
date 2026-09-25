@@ -22,6 +22,8 @@ export default defineConfig({
     },
   },
   transformers: [
-    transformerCompileClass(),
+    transformerCompileClass({
+      classPrefix: 'hat-',
+    }),
   ],
 })
