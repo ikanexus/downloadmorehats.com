@@ -7,25 +7,20 @@
 		<title>Download More Hats</title>
 	</head>
 	<body class=":uno: bg-gray-300 flex flex-col w-full h-screen items-center justify-center">
-		<div id="view"></div>
-		<template id="tpl-idle">
-			<div class=":uno: flex flex-col items-center gap-8">
-				<h1 class="text-4xl text-center">
-					<span class="i-heroicons:arrow-down inline-block"></span>
-					CLICK TO DOWNLOAD MORE HATS
-					<span class="i-heroicons:arrow-down inline-block"></span>
-				</h1>
-				<img id="hat" src="/src/assets/hat.webp" alt="HAT" class="cursor-pointer animate-zoom" title="Download">
-			</div>
-		</template>
+		<div id="view" class="flex flex-col items-center gap-8">
+			<h1 class=":uno: text-4xl text-center">
+				<span class="i-heroicons:arrow-down inline-block"></span>
+				CLICK TO DOWNLOAD MORE HATS
+				<span class="i-heroicons:arrow-down inline-block"></span>
+			</h1>
+			<img id="hat" src="/src/assets/hat.webp" alt="HAT" class=":uno: cursor-pointer animate-zoom" title="Download">
+		</div>
 		<template id="tpl-gasp">
-			<div class=":uno: flex flex-col items-center gap-8">
-				<h1 class="text-4xl">
-					YOU WOULDN'T
-				</h1>
-				<img src="/src/assets/gasp.webp" alt="YOU WOULDN'T" title="You Wouldn't?!">
-				<a class="font-semibold hover:underline" href="https://twitch.tv/dyarikku">Beg the Fox for Forgiveness</a>
-			</div>
+			<h1 class=":uno: text-4xl text-center">
+				YOU WOULDN'T
+			</h1>
+			<img src="/src/assets/gasp.webp" alt="YOU WOULDN'T" title="You Wouldn't?!">
+			<a class="font-semibold hover:underline" href="https://twitch.tv/dyarikku">Beg the Fox for Forgiveness</a>
 		</template>
 		<span class=":uno: text-xs absolute bottom-2">Scuff Website by @ika.dev</span>
 		<script src="/src/main.js" type="module"></script>
