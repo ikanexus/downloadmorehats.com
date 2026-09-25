@@ -9,13 +9,9 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "@iconify-json/heroicons": "^1.2.3",
-    "@iconify/tailwind4": "^1.2.3",
-    "@tailwindcss/vite": "^4.3.3",
     "vite": "^8.3.0"
   },
   "dependencies": {
-    "alpinejs": "^3.17.4",
-    "tailwindcss": "^4.3.3"
+    "unocss": "^66.10.5"
   }
 }
